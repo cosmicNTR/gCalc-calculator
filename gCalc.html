@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gCalc</title>
+    <link rel="shortcut icon" type="image/x-icon" src="calculator-icon-21.ico" />
+
+    <style type="text/css">
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        margin: 2px;
+        cursor: pointer;
+        border: none;
+        color: #fff;
+        background-size: 200%;
+        transition: 0.6s all ease;
+        background-color: #FFE53B;
+        background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+      }
+
+      .button:hover{
+        background-position: center;
+      }
+
+    .textview {
+        width: 210px;
+        height: px;
+        margin: 0px;
+        font-size: 25px;
+        padding: 5px;
+        border:none ;
+        color: #606d8b;
+      }
+
+      .main{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      .bg{
+        background-image: linear-gradient( 102.2deg,  rgba(109,118,150,1) 7.1%, rgba(89,72,79,1) 14.7%, rgba(69,92,79,1) 28%, rgba(204,85,67,1) 43.4%, rgba(237,181,121,1) 60.2%, rgba(219,230,175,1) 76.8% );
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-size: 100%;
+      }
+
+     </style>
+
+    <script type="text/javascript">
+      function insert(number) {
+        document.form.textview.value+=number;
+      }
+
+      function equals() {
+        var exp=document.form.textview.value;
+        if (exp){
+          document.form.textview.value=eval(exp);
+        }
+      }
+
+        function clean() {
+          document.form.textview.value="";
+        }
+
+      function back() {
+        var exp=document.form.textview.value;
+        document.form.textview.value=exp.substring(0,exp.length-1);
+      }
+
+    </script>
+
+</head>
+
+<body>
+  <div class="bg">
+
+  </div>
+   <div class="main">
+     <form class="textview" name="form">
+         <input type="text" style="text-align: right" class="textview" name="textview" placeholder="gCalc          " /><br>
+     </form>
+
+       <table>
+                <tr>
+                    <td>
+                         <button class="button"  onclick="insert(7)">7</button>
+                         <button class="button"  onclick="insert(8)">8</button>
+                         <button class="button"  onclick="insert(9)">9</button>
+                         <button class="button"  style="background-image:linear-gradient(to right,#12cbc4,#0652dd,#12cbc4)" onclick="insert('+')">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                      <button class="button"  onclick="insert(4)">4</button>
+                      <button class="button"  onclick="insert(5)">5</button>
+                      <button class="button"  onclick="insert(6)">6</button>
+                      <button class="button"  style="background-image:linear-gradient(to right,#12cbc4,#0652dd,#12cbc4)" onclick="insert('-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <button class="button"  onclick="insert(1)">1</button>
+                      <button class="button"  onclick="insert(2)">2</button>
+                      <button class="button"  onclick="insert(3)">3</button>
+                      <button class="button" style="background-image:linear-gradient(to right,#12cbc4,#0652dd,#12cbc4)" onclick="insert('*')">x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button" onclick="insert(0)">0</button>
+                        <button class="button" onclick="insert('.')">.</button>
+                        <button class="button"  style="background-image: linear-gradient( 89deg,  rgba(189,0,0,1) -12.5%, rgba(228,86,0,1) 23.4%, rgba(248,161,0,1) 69.8%, rgba(255,242,2,1) 103.7% )" value="<" onclick="back()"><</button>
+                        <button class="button"  style="background-image:linear-gradient(to right,#12cbc4,#0652dd,#12cbc4)"  value="/" onclick="insert('/')">/</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="button" style="background-image: linear-gradient( 89deg,  rgba(189,0,0,1) -12.5%, rgba(228,86,0,1) 23.4%, rgba(248,161,0,1) 69.8%, rgba(255,242,2,1) 103.7% )" onclick="clean()">C</button>
+                        <button class="button" style="width:165px;background-image:linear-gradient(to right,#12cbc4,#0652dd,#12cbc4)" onclick="equals()">=</button>
+                    </td>
+                </tr>
+       </table>
+
+
+   </div>
+</body>
+</html>
