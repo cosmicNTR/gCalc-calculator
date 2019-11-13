@@ -1,0 +1,8 @@
+C:\Users\Mrs Gama\source\repos\gCalc\gCalc\bin\Debug\gCalc.exe.config
+C:\Users\Mrs Gama\source\repos\gCalc\gCalc\bin\Debug\gCalc.exe
+C:\Users\Mrs Gama\source\repos\gCalc\gCalc\bin\Debug\gCalc.pdb
+C:\Users\Mrs Gama\source\repos\gCalc\gCalc\obj\Debug\gCalc.Form1.resources
+C:\Users\Mrs Gama\source\repos\gCalc\gCalc\obj\Debug\gCalc.Properties.Resources.resources
+C:\Users\Mrs Gama\source\repos\gCalc\gCalc\obj\Debug\gCalc.csproj.GenerateResource.cache
+C:\Users\Mrs Gama\source\repos\gCalc\gCalc\obj\Debug\gCalc.exe
+C:\Users\Mrs Gama\source\repos\gCalc\gCalc\obj\Debug\gCalc.pdb
